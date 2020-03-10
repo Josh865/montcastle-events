@@ -30,6 +30,7 @@ module.exports = {
         tailwind: true,
       },
     },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
