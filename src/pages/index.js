@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
         className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6"
         style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}
       >
-        <h1 className="text-xl font-bold text-white">Site Title</h1>
+        <h1 className="text-xl font-bold text-white">Tiny Weddings NC</h1>
         <ul className="flex items-center">
           <li className="mr-4">Blog</li>
           <li className="mr-4">Services</li>
@@ -27,7 +27,15 @@ const IndexPage = ({ data }) => (
       />
     </div>
 
-    <div className="max-w-2xl mx-auto mt-6 border">Content</div>
+    <div className="py-16 bg-red-200">
+      <div className="max-w-2xl mx-auto">
+        From adventure weddings in an airplane to beautiful ceremonies at the
+        local art museum, our micro weddings vary widely in size and style. With
+        the guest list ranging from as little as zero to as many as sixty
+        people, our typical “microwedding” is perfect for a bride and groom who
+        want to get away from the headaches and expenses of mainstream weddings.
+      </div>
+    </div>
   </>
 );
 
