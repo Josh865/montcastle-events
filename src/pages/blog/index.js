@@ -12,7 +12,10 @@ const BlogIndexPage = ({ data }) => (
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <li key={node.id}>
-          <Link to={node.fields.slug}>
+          <Link
+            to={node.fields.slug}
+            className="text-blue-600 hover:text-black"
+          >
             {node.frontmatter.title} - {node.frontmatter.date}
           </Link>
         </li>
@@ -25,7 +28,7 @@ export default BlogIndexPage;
 
 export const query = graphql`
   query MyQuery {
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: ASC }) {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           html

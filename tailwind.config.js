@@ -1,7 +1,18 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        coconut: '#fcefe7',
+        peach: '#fdd2b3',
+        'pinor-noir': '#dfaeb2',
+        blonde: '#ffed9e',
+        'icy-blue': '#cfe7f9',
+      },
+      fontFamily: {
+        display: ['Dancing Script'],
+      },
+    },
   },
   variants: {},
   plugins: [],
-}
+};
