@@ -173,9 +173,9 @@ const Home = () => {
         </div>
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
-            className="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
+            className="object-cover object-bottom w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
             src={hero}
-            alt=""
+            alt="Couple holding hands overlooking mountains"
           />
         </div>
       </div>
