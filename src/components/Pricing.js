@@ -26,7 +26,7 @@ const Pricing = () => (
                   <span className="mt-2 mr-1 text-4xl leading-none sm:text-5xl">
                     $
                   </span>
-                  <span>2950</span>
+                  <span>2,950</span>
                 </span>
                 <span className="text-2xl font-semibold leading-8 tracking-wide text-gray-400">
                   USD
@@ -187,7 +187,7 @@ const Pricing = () => (
               <div className="flex items-center justify-center mt-4">
                 <span className="flex items-start px-3 text-6xl font-medium leading-none tracking-tight text-gray-900">
                   <span className="mt-2 mr-2 text-4xl">$</span>
-                  <span>2350</span>
+                  <span>2,350</span>
                 </span>
                 <span className="text-2xl font-semibold leading-8 tracking-wide text-gray-400">
                   USD
