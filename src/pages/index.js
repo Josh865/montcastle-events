@@ -142,7 +142,7 @@ const Home = () => {
                 <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl font-display">
                   Easy. Affordable.
                   <br className="xl:hidden" />
-                  <span className="text-pinor-noir"> Beautiful.</span>
+                  <span className="text-blue-500"> Beautiful.</span>
                 </h2>
                 <p className="mt-3 text-lg font-light text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   Tiny weddings by Montcastle Events is the easiest way to have
