@@ -184,7 +184,7 @@ const Home = () => {
       <div className="px-4 py-12 lg:py-24 sm:px-6 lg:px-8 pattern-bg">
         <div className="flex justify-center mb-12">
           <span
-            className="text-4xl leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl font-display"
+            className="text-4xl leading-10 tracking-tight text-blue-900 sm:text-5xl sm:leading-none md:text-6xl font-display"
             style={{ textShadow: '1px 1px 5px rgba(0,0,0,0.2)' }}
           >
             So how does this work?
