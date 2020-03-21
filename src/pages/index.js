@@ -181,7 +181,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="px-20 pt-24 pb-36 pattern-bg">
+      <div className="px-4 py-12 lg:py-24 sm:px-6 lg:px-8 pattern-bg">
         <div className="flex justify-center mb-12">
           <span
             className="text-4xl leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl font-display"
@@ -193,7 +193,7 @@ const Home = () => {
         <Pricing />
       </div>
 
-      <div className="relative my-24">
+      <div className="relative px-4 my-24 sm:px-6 lg:px-8">
         <blockquote className="mt-8">
           <div className="max-w-3xl mx-auto text-xl font-medium leading-8 text-center text-gray-900">
             <p>
@@ -234,7 +234,7 @@ const Home = () => {
         </blockquote>
       </div>
 
-      <div className="pt-16 pb-8 bg-gray-100">
+      <div className="px-4 pt-16 pb-8 bg-gray-100 sm:px-6 lg:px-8">
         <div className="flex items-center justify-around max-w-2xl mx-auto">
           <a
             href="#"
