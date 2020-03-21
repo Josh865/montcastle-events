@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Pricing from '../components/Pricing';
+import Pricing from '../components/PricingTwo';
 
-import wedding from '../images/wedding.svg';
+import crown from '../images/crown.svg';
 import hero from '../images/hero.jpg';
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
                     <a href="/">
                       <img
                         className="w-auto h-10 sm:h-12"
-                        src={wedding}
+                        src={crown}
                         alt="Tiny Weddings Logo"
                       />
                     </a>
@@ -82,7 +82,7 @@ const Home = () => {
                   <div className="overflow-hidden bg-white rounded-lg shadow-xs">
                     <div className="flex items-center justify-between px-5 pt-4">
                       <div>
-                        <img className="w-auto h-8" src={wedding} alt="" />
+                        <img className="w-auto h-8" src={crown} alt="" />
                       </div>
                       <div className="-mr-2">
                         <button
@@ -139,17 +139,18 @@ const Home = () => {
 
             <div className="max-w-screen-xl px-4 mx-auto mt-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
               <div className="sm:text-center lg:text-left">
-                <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+                <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl font-display">
                   Easy. Affordable.
                   <br className="xl:hidden" />
-                  <span className="text-pinor-noir"> Awesome.</span>
+                  <span className="text-pinor-noir"> Beautiful.</span>
                 </h2>
-                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
+                <p className="mt-3 text-lg font-light text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                  Tiny weddings by Montcastle Events is the easiest way to have
+                  a beautiful and affordable wedding around Charlotte! We’ve
+                  simplified the process so you can show up, show out, and live
+                  happily ever after.
                 </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                {/* <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
                     <a
                       href="#"
@@ -158,7 +159,7 @@ const Home = () => {
                       Get started
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <svg
@@ -180,7 +181,15 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="px-16 py-36 bg-coconut">
+      <div className="px-20 pt-24 pb-36 pattern-bg">
+        <div className="flex justify-center mb-12">
+          <span
+            className="text-4xl leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl font-display"
+            style={{ textShadow: '1px 1px 5px rgba(0,0,0,0.2)' }}
+          >
+            So how does this work?
+          </span>
+        </div>
         <Pricing />
       </div>
 
