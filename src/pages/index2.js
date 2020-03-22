@@ -91,7 +91,7 @@ const Index2 = ({ data }) => (
             </p>
           </div>
           <div className="flex items-center self-stretch justify-center w-40 bg-coconut">
-            <span className="text-3xl">$4800</span>
+            <span className="text-3xl">$4900</span>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2">
