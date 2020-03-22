@@ -10,9 +10,11 @@ module.exports = {
         // 'pinor-noir': '#806769',
         blonde: '#ffed9e',
         'icy-blue': '#cfe7f9',
+        navy: '#18217d',
       },
       fontFamily: {
         sans: ['Raleway', ...defaultTheme.fontFamily.sans],
+        serif: ['Merriweather', ...defaultTheme.fontFamily.sans],
         display: ['Dancing Script'],
       },
     },

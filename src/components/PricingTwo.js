@@ -33,7 +33,7 @@ const Pricing = () => (
               <h2 className="text-3xl font-semibold leading-9 text-center text-gray-900">
                 Tiny
               </h2>
-              <p className="mt-1 font-semibold leading-7 tracking-widest text-center text-blue-500 uppercase">
+              <p className="mt-1 font-semibold leading-7 tracking-widest text-center uppercase text-navy">
                 Up to 20 of your nearest and dearest
               </p>
               <div className="flex items-center justify-center mt-4">
@@ -77,7 +77,7 @@ const Pricing = () => (
                 <a
                   href="https://gum.co/KXjZm"
                   data-gumroad-single-product="true"
-                  className="block w-full px-6 py-3 text-base font-semibold leading-6 text-center text-blue-500 transition duration-150 ease-in-out bg-white rounded-lg hover:text-pinor-noir focus:outline-none focus:shadow-outline"
+                  className="block w-full px-6 py-3 text-base font-semibold leading-6 text-center transition duration-150 ease-in-out bg-white rounded-lg text-navy hover:text-pinor-noir focus:outline-none focus:shadow-outline"
                   target="_blank"
                 >
                   Start Planning
@@ -96,7 +96,7 @@ const Pricing = () => (
               <h2 className="text-3xl font-semibold leading-9 text-center text-gray-900">
                 Tiniest
               </h2>
-              <p className="mt-1 font-semibold leading-7 tracking-widest text-center text-blue-500 uppercase">
+              <p className="mt-1 font-semibold leading-7 tracking-widest text-center uppercase text-navy">
                 A fully styled elopement for you and yours
               </p>
               <div className="flex items-center justify-center mt-4">
@@ -116,7 +116,7 @@ const Pricing = () => (
                 <li className="flex items-start mt-4 first:mt-0">
                   <div className="flex-shrink-0">
                     <svg
-                      className="w-6 h-6 text-blue-400"
+                      className="w-6 h-6 text-navy"
                       stroke="currentColor"
                       fill="none"
                       viewBox="0 0 24 24"
