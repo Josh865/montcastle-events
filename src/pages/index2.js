@@ -56,16 +56,16 @@ const Index2 = ({ data }) => (
         <div className="flex flex-col items-center mt-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-16 h-16 md:w-20 md:h-20"
+            className="w-16 h-16 text-pinor-noir md:w-20 md:h-20"
             viewBox="0 0 512 512"
           >
             <path
-              fill="#000"
+              fill="currentColor"
               d="M504.981 150.787a19.997 19.997 0 00-21.736-2.769l-109.444 53.28L271.109 82.896a19.998 19.998 0 00-30.218 0L138.199 201.297l-109.444-53.28a20.001 20.001 0 00-27.89 23.8l76 250A19.999 19.999 0 0096 436h320a19.998 19.998 0 0019.134-14.182l76-250a19.998 19.998 0 00-6.153-21.031zM401.175 396H110.823L52.472 204.052l82.022 39.931a20 20 0 0023.863-4.878L256 126.525l97.644 112.58a19.998 19.998 0 0023.862 4.878l82.022-39.931L401.175 396z"
             />
           </svg>
           <h1
-            className="-mt-3 text-4xl font-bold tracking-tight font-display md:text-6xl leading-0 text-shadow"
+            className="-mt-3 text-4xl font-bold tracking-tight text-gray-700 font-display md:text-6xl leading-0 text-shadow"
             style={{
               transform: 'rotate(-3deg)',
             }}
@@ -73,7 +73,7 @@ const Index2 = ({ data }) => (
             Montcastle Events
           </h1>
         </div>
-        <div className="max-w-3xl mt-4 font-sans text-lg font-light sm:text-xl max-auto">
+        <div className="max-w-3xl mt-4 font-sans text-lg font-light text-gray-800 sm:text-xl max-auto">
           Tiny weddings by Montcastle Events is the easiest way to have a
           beautiful and affordable wedding around Charlotte! We’ve simplified
           the process so you can show up, show out, and live happily ever after.
