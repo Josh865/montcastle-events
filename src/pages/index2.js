@@ -85,7 +85,9 @@ const Index2 = ({ data }) => (
       <div className="max-w-3xl px-4 mx-auto">
         <div className="flex items-center justify-between border border-coconut">
           <div className="flex-1 p-6 pattern-bg-diamonds">
-            <h3 className="text-4xl font-display text-shadow">Tiny</h3>
+            <h3 className="text-4xl sm:text-6xl font-display text-shadow">
+              Tiny
+            </h3>
             <p className="text-base sm:text-lg">
               Up to 20 of your nearest and dearest
             </p>
