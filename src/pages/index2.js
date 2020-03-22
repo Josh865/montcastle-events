@@ -36,7 +36,8 @@ const Index2 = ({ data }) => (
     <div
       className="relative"
       style={{
-        height: '70vh',
+        minHeight: '600px',
+        maxHeight: '70vh',
         backgroundImage: `url(${hero})`,
         backgroundPosition: 'bottom center',
         backgroundSize: 'cover',
@@ -72,11 +73,7 @@ const Index2 = ({ data }) => (
             Montcastle Events
           </h1>
         </div>
-        {/* <hr
-          className="w-full max-w-2xl mx-auto mt-4 mb-6"
-          style={{ borderColor: 'rgba(24, 33, 125, 0.3)' }}
-        /> */}
-        <div className="max-w-3xl mt-4 font-sans text-xl font-light max-auto">
+        <div className="max-w-3xl mt-4 font-sans text-lg font-light sm:text-xl max-auto">
           Tiny weddings by Montcastle Events is the easiest way to have a
           beautiful and affordable wedding around Charlotte! We’ve simplified
           the process so you can show up, show out, and live happily ever after.
@@ -85,17 +82,19 @@ const Index2 = ({ data }) => (
     </div>
 
     <div className="py-12">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl px-4 mx-auto">
         <div className="flex items-center justify-between border border-coconut">
           <div className="flex-1 p-6 pattern-bg-diamonds">
-            <h3 className="text-6xl font-display text-shadow">Tiny</h3>
-            <p className="text-xl">Up to 20 of your nearest and dearest</p>
+            <h3 className="text-4xl font-display text-shadow">Tiny</h3>
+            <p className="text-base sm:text-lg">
+              Up to 20 of your nearest and dearest
+            </p>
           </div>
-          <div className="flex items-center self-stretch justify-center px-12 bg-coconut">
+          <div className="flex items-center self-stretch justify-center w-40 bg-coconut">
             <span className="text-3xl">$4800</span>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-8 mt-4">
+        <div className="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2">
           <ul>
             {tinyFeatures.map(feature => (
               <li className="flex items-start mt-3 first:mt-0">
@@ -123,23 +122,25 @@ const Index2 = ({ data }) => (
           <Img
             fluid={data.tiny.childImageSharp.fluid}
             alt="Tiny wedding"
-            className="rounded shadow-lg"
+            className="hidden rounded shadow-lg sm:block"
           />
         </div>
 
         {/* Tiniest */}
         <div className="flex items-center justify-between mt-12 border border-coconut">
           <div className="flex-1 p-6 pattern-bg-diamonds">
-            <h3 className="text-6xl font-display text-shadow">Tiniest</h3>
-            <p className="text-xl">
+            <h3 className="text-4xl sm:text-6xl font-display text-shadow">
+              Tiniest
+            </h3>
+            <p className="text-base sm:text-xl">
               A fully styled elopement for you and yours
             </p>
           </div>
-          <div className="flex items-center self-stretch justify-center px-12 bg-coconut">
+          <div className="flex items-center self-stretch justify-center w-40 bg-coconut">
             <span className="text-3xl">$500</span>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-8 mt-4">
+        <div className="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2">
           <ul>
             {tiniestFeatures.map(feature => (
               <li className="flex items-start mt-3 first:mt-0">
@@ -167,7 +168,7 @@ const Index2 = ({ data }) => (
           <div>
             <img
               src={tiniest}
-              className="w-full h-auto rounded shadow-lg"
+              className="hidden w-full h-auto rounded shadow-lg sm:block"
             ></img>
           </div>
           {/* <Img
