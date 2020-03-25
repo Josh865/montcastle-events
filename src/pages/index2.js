@@ -7,6 +7,9 @@ import Pricing from '../components/PricingTwo';
 import hero from '../images/hero.jpg';
 import tiny from '../images/tiny.jpg';
 import tiniest from '../images/tiniest.jpg';
+import flowers from '../images/flowers.jpg';
+import image01 from '../images/01.jpg';
+import image02 from '../images/02.jpg';
 
 const tinyFeatures = [
   'Five hours of consultation',
@@ -44,36 +47,44 @@ const Index2 = ({ data }) => (
       }}
     >
       <div
-        className="absolute inset-0 flex flex-col items-center px-4 md:px-0"
+        className="absolute inset-0 flex flex-col items-center px-4"
         style={{
           color: '#000',
           background:
             'linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 80%)',
-          // background:
-          // 'linear-gradient(to bottom, rgba(241, 195, 184, 1), rgba(241, 195, 184, 0) 80%)',
         }}
       >
         <div className="flex flex-col items-center mt-8">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-16 h-16 text-pinor-noir md:w-20 md:h-20"
-            viewBox="0 0 512 512"
-          >
-            <path
-              fill="currentColor"
-              d="M504.981 150.787a19.997 19.997 0 00-21.736-2.769l-109.444 53.28L271.109 82.896a19.998 19.998 0 00-30.218 0L138.199 201.297l-109.444-53.28a20.001 20.001 0 00-27.89 23.8l76 250A19.999 19.999 0 0096 436h320a19.998 19.998 0 0019.134-14.182l76-250a19.998 19.998 0 00-6.153-21.031zM401.175 396H110.823L52.472 204.052l82.022 39.931a20 20 0 0023.863-4.878L256 126.525l97.644 112.58a19.998 19.998 0 0023.862 4.878l82.022-39.931L401.175 396z"
+          <div className="relative flex justify-center w-80">
+            <div
+              className="absolute z-0 w-full h-px bg-pinor-noir"
+              style={{ top: '50%', transform: 'translateY(-50%)' }}
             />
-          </svg>
-          <h1
-            className="-mt-3 text-4xl font-bold tracking-tight text-gray-700 font-display md:text-6xl leading-0 text-shadow"
-            style={{
-              transform: 'rotate(-3deg)',
-            }}
-          >
+            <div
+              className="absolute z-0 w-20 h-px md:w-24"
+              style={{
+                top: '50%',
+                left: '50%',
+                transform: 'translateY(-50%) translateX(-50%)',
+                backgroundColor: '#f6f6f6',
+              }}
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="z-10 w-16 h-16 text-pinor-noir md:w-20 md:h-20"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M504.981 150.787a19.997 19.997 0 00-21.736-2.769l-109.444 53.28L271.109 82.896a19.998 19.998 0 00-30.218 0L138.199 201.297l-109.444-53.28a20.001 20.001 0 00-27.89 23.8l76 250A19.999 19.999 0 0096 436h320a19.998 19.998 0 0019.134-14.182l76-250a19.998 19.998 0 00-6.153-21.031zM401.175 396H110.823L52.472 204.052l82.022 39.931a20 20 0 0023.863-4.878L256 126.525l97.644 112.58a19.998 19.998 0 0023.862 4.878l82.022-39.931L401.175 396z"
+              />
+            </svg>
+          </div>
+          <h1 className="-mt-3 text-4xl font-bold tracking-tight text-gray-700 font-display md:text-6xl leading-0 text-shadow">
             Montcastle Events
           </h1>
         </div>
-        <div className="max-w-3xl mt-4 font-sans text-lg font-light text-gray-800 sm:text-xl max-auto">
+        <div className="max-w-3xl font-sans text-lg font-light text-gray-600 mx-automt-4 sm:text-xl">
           Tiny weddings by Montcastle Events is the easiest way to have a
           beautiful and affordable wedding around Charlotte! We’ve simplified
           the process so you can show up, show out, and live happily ever after.
@@ -84,7 +95,7 @@ const Index2 = ({ data }) => (
     <div className="py-12">
       <div className="max-w-3xl px-4 mx-auto">
         <div className="flex items-center justify-between border border-coconut">
-          <div className="flex-1 p-6 pattern-bg-diamonds">
+          <div className="flex-1 p-6 pattern-bg">
             <h3 className="text-4xl sm:text-6xl font-display text-shadow">
               Tiny
             </h3>
@@ -121,16 +132,20 @@ const Index2 = ({ data }) => (
               </li>
             ))}
           </ul>
-          <Img
+          <img
+            src={image01}
+            className="hidden w-full h-auto rounded shadow-lg sm:block"
+          />
+          {/* <Img
             fluid={data.tiny.childImageSharp.fluid}
             alt="Tiny wedding"
             className="hidden rounded shadow-lg sm:block"
-          />
+          /> */}
         </div>
 
         {/* Tiniest */}
         <div className="flex items-center justify-between mt-12 border border-coconut">
-          <div className="flex-1 p-6 pattern-bg-diamonds">
+          <div className="flex-1 p-6 pattern-bg">
             <h3 className="text-4xl sm:text-6xl font-display text-shadow">
               Tiniest
             </h3>
@@ -169,9 +184,9 @@ const Index2 = ({ data }) => (
           </ul>
           <div>
             <img
-              src={tiniest}
+              src={image02}
               className="hidden w-full h-auto rounded shadow-lg sm:block"
-            ></img>
+            />
           </div>
           {/* <Img
             fluid={data.tiny.childImageSharp.fluid}

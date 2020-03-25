@@ -15,7 +15,7 @@ module.exports = {
       fontFamily: {
         sans: ['Raleway', ...defaultTheme.fontFamily.sans],
         serif: ['Merriweather', ...defaultTheme.fontFamily.sans],
-        display: ['Dancing Script'],
+        display: ['Euphoria Script'],
       },
     },
   },
