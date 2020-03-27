@@ -71,7 +71,7 @@ const Index2 = ({ data }) => (
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="z-10 w-16 h-16 text-pinor-noir md:w-20 md:h-20"
+              className="z-10 w-16 h-16 text-white md:w-20 md:h-20"
               viewBox="0 0 512 512"
             >
               <path
@@ -80,7 +80,7 @@ const Index2 = ({ data }) => (
               />
             </svg>
           </div>
-          <h1 className="-mt-3 text-4xl font-bold tracking-tight text-gray-700 font-display md:text-6xl leading-0 text-shadow">
+          <h1 className="-mt-3 text-4xl font-bold tracking-tight text-sage-green font-display md:text-6xl leading-0 text-shadow">
             Montcastle Events
           </h1>
         </div>
@@ -92,7 +92,7 @@ const Index2 = ({ data }) => (
       </div>
     </div>
 
-    <div className="py-12">
+    <div className="py-12 bg-coconut">
       <div className="max-w-3xl px-4 mx-auto">
         <div className="flex items-center justify-between border border-coconut">
           <div className="flex-1 p-6 pattern-bg">
@@ -107,13 +107,13 @@ const Index2 = ({ data }) => (
             <span className="text-3xl">$4900</span>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 mt-4 bg-white sm:grid-cols-2">
           <ul>
             {tinyFeatures.map(feature => (
               <li className="flex items-start mt-3 first:mt-0">
                 <div className="flex-shrink-0">
                   <svg
-                    className="w-6 h-6 text-pinor-noir"
+                    className="w-6 h-6 text-sage-green"
                     stroke="currentColor"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -163,7 +163,7 @@ const Index2 = ({ data }) => (
               <li className="flex items-start mt-3 first:mt-0">
                 <div className="flex-shrink-0">
                   <svg
-                    className="w-6 h-6 text-pinor-noir"
+                    className="w-6 h-6 text-sage-green"
                     stroke="currentColor"
                     fill="none"
                     viewBox="0 0 24 24"

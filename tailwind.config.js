@@ -11,6 +11,7 @@ module.exports = {
         blonde: '#ffed9e',
         'icy-blue': '#cfe7f9',
         navy: '#18217d',
+        'sage-green': '#abb39a',
       },
       fontFamily: {
         sans: ['Raleway', ...defaultTheme.fontFamily.sans],
