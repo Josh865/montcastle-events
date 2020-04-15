@@ -24,3 +24,18 @@ body {
 }
 
 @tailwind utilities;
+
+.pin-middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@responsive {
+  .h-600 {
+    height: 600px;
+  }
+
+  .h-450 {
+    height: 450px;
+  }
+}
