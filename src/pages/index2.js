@@ -71,7 +71,7 @@ const Index2 = ({ data }) => (
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="z-10 w-16 h-16 text-white md:w-20 md:h-20"
+              className="z-10 w-16 h-16 text-navy md:w-20 md:h-20"
               viewBox="0 0 512 512"
             >
               <path
@@ -80,7 +80,7 @@ const Index2 = ({ data }) => (
               />
             </svg>
           </div>
-          <h1 className="-mt-3 text-4xl font-bold tracking-tight text-sage-green font-display md:text-6xl leading-0 text-shadow">
+          <h1 className="-mt-3 text-4xl font-bold tracking-tight text-navy font-display md:text-6xl leading-0 text-shadow">
             Montcastle Events
           </h1>
         </div>
@@ -92,7 +92,7 @@ const Index2 = ({ data }) => (
       </div>
     </div>
 
-    <div className="py-12 bg-coconut">
+    <div className="py-12">
       <div className="max-w-3xl px-4 mx-auto">
         <div className="flex items-center justify-between border border-coconut">
           <div className="flex-1 p-6 pattern-bg">
