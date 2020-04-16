@@ -10,7 +10,7 @@ import tiniest from '../images/tiniest.jpg';
 import flowers from '../images/flowers.jpg';
 import image01 from '../images/01.jpg';
 import image02 from '../images/02.jpg';
-import mary from '../images/mary.webp';
+import mary from '../images/mary.jpg';
 
 const packages = [
   {
@@ -87,60 +87,198 @@ const Index2 = ({ data }) => (
       <h1 className="text-2xl text-center">Montcastle Events</h1>
     </div>
 
-    <div
-      style={{
-        minHeight: '600px',
-        maxHeight: '70vh',
-        backgroundImage: `url(${hero})`,
-        backgroundPosition: 'bottom center',
-        backgroundSize: 'cover',
-      }}
-    />
-
-    <div className="max-w-3xl px-6 py-16 mx-auto text-lg font-thin leading-loose text-gray-500 md:text-xl md:px-0">
-      Planning your wedding should be as easy as being in love. Now it is!
-      Montcastle Events has turned the planning process upside down and changed
-      what used to be an overwhelming process into one that's fun, simple, and
-      affordable!
+    {/* Mobile hero */}
+    <div className="block md:hidden">
+      <div
+        style={{
+          minHeight: '600px',
+          maxHeight: '70vh',
+          backgroundImage: `url(${hero})`,
+          backgroundPosition: 'bottom center',
+          backgroundSize: 'cover',
+        }}
+      />
+      <div className="w-5/6 px-6 py-8 mx-auto -mt-16 text-lg leading-loose text-gray-600 bg-red-100">
+        Planning your wedding should be as easy as being in love. Now it is!
+        Montcastle Events has turned the planning process upside down and
+        changed what used to be an overwhelming process into one that's fun,
+        simple, and affordable!
+      </div>
     </div>
 
-    {packages.map((p, index) => (
-      <>
-        <Package
-          name={p.name}
-          price={p.price}
-          features={p.features}
-          image={p.image}
-          index={index}
-        />
-
-        {index !== packages.length - 1 && <div className="h-1" />}
-      </>
-    ))}
-
-    <div className="py-12 mt-12">
-      <div className="max-w-2xl px-6 mx-auto mb-12 text-xl italic font-thin text-gray-600 md:text-2xl md:px-0">
-        My gift in life is to serve, my passion is to create and event planning
-        meets at the intersection of the two.
+    {/* Desktop hero */}
+    <div className="hidden md:block">
+      <div className="relative max-w-6xl mx-auto">
+        <img src={hero} className="w-3/4 ml-auto shadow-md" />
+        <div className="absolute w-1/2 p-10 text-lg leading-loose text-gray-500 bg-red-100 shadow-lg pin-middle">
+          Planning your wedding should be as easy as being in love. Now it is!
+          Montcastle Events has turned the planning process upside down and
+          changed what used to be an overwhelming process into one that's fun,
+          simple, and affordable!
+        </div>
       </div>
-      <div
-        className="relative flex flex-col max-w-5xl mx-auto md:justify-end md:flex-row"
-        style={{ height: '500px' }}
+    </div>
+
+    <div className="max-w-2xl px-6 mx-auto my-12 md:px-0">
+      <h2
+        className="mb-8 text-3xl font-bold leading-tight text-center md:font-semibold md:text-5xl"
+        style={{ color: '#587795' }}
       >
-        <div className="top-0 left-0 w-full p-6 text-base text-gray-600 bg-white border-2 shadow-lg md:text-lg border-pinor-noir md:absolute md:max-w-xl md:mt-12">
+        So, how does this work?
+      </h2>
+      <p className="text-lg leading-loose text-gray-600">
+        All of our packages include everything you need for a beautiful
+        celebration with forty of your guests. We've partnered with some amazing
+        vendors including{' '}
+        <a
+          href="https://getcozybars.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-800 underline"
+        >
+          Bubbles and Brews
+        </a>{' '}
+        mobile bar to add that extra touch of amazing to your day!
+      </p>
+    </div>
+
+    <div className="max-w-full mx-auto">
+      {packages.map((p, index) => (
+        <>
+          <Package
+            name={p.name}
+            price={p.price}
+            features={p.features}
+            image={p.image}
+            index={index}
+          />
+
+          {/* {index !== packages.length - 1 && <div className="h-1" />} */}
+        </>
+      ))}
+    </div>
+
+    <div className="py-16 bg-blue-100">
+      <div className="max-w-2xl px-6 mx-auto mb-8 md:px-0">
+        <h2
+          className="mb-8 text-5xl leading-none text-center"
+          style={{ color: '#587795' }}
+        >
+          Who am I?
+        </h2>
+        <p className="text-lg leading-loose text-gray-500">
           I&apos;m Mary Katherine, lover of happily ever afters and the little
           things. I&apos;ve had the opportunity to work with some of the premier
           vendors in the South and am so eager to bring what I know to your
           special day. I can&apos;t wait to dream with you. Let&apos;s talk
           soon!
+        </p>
+      </div>
+
+      <div className="relative flex flex-col max-w-5xl mx-auto md:justify-end md:flex-row md:h-600">
+        <div className="w-full p-6 text-base leading-loose text-gray-600 bg-white border-2 shadow-lg md:top-0 md:left-0 md:text-lg border-pinor-noir md:absolute md:max-w-xl md:mt-12">
+          My gift in life is to serve, my passion is to create and event
+          planning meets at the intersection of the two.
         </div>
-        <div className="w-full md:w-2/3">
+        <div className="max-w-md mx-auto mt-6 md:max-w-full md:mx-0 md:w-2/3 md:mt-0">
           <img
             src={mary}
             className="object-contain object-top w-full h-full"
             alt="Mary Katherine"
           />
         </div>
+      </div>
+    </div>
+
+    <div className="max-w-2xl px-6 mx-auto my-12 md:px-0">
+      <h2
+        className="mb-8 text-3xl font-bold leading-tight text-center md:font-semibold md:text-5xl"
+        style={{ color: '#587795' }}
+      >
+        Let&apos;s get in touch!
+      </h2>
+      <p className="text-lg text-gray-500">
+        Ready to do this thing? Let me know and we&apos;ll get the ball rolling
+        on your perfect day in no time!
+      </p>
+      <div className="my-6">
+        <label className="block">
+          <span className="text-gray-700">Name</span>
+          <input
+            className="block w-full mt-1 form-input"
+            placeholder="Jane Doe"
+          />
+        </label>
+
+        <label className="block mt-4">
+          <span className="text-gray-700">Email</span>
+          <input
+            className="block w-full mt-1 form-input"
+            placeholder="Jane Doe"
+          />
+        </label>
+
+        <div className="block mt-4">
+          <span className="text-gray-700">
+            Which package are you interested in?
+          </span>
+          <div className="mt-2">
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="radio"
+                  value="1"
+                  checked
+                />
+                <span className="ml-2">Charming</span>
+              </label>
+            </div>
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="radio"
+                  value="2"
+                />
+                <span className="ml-2">Cheery</span>
+              </label>
+            </div>
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="radio"
+                  value="3"
+                />
+                <span className="ml-2">Cozy</span>
+              </label>
+            </div>
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="radio"
+                  value="3"
+                />
+                <span className="ml-2">Elope</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <label className="block mt-4">
+          <span className="text-gray-700">Any questions?</span>
+          <textarea
+            className="block w-full mt-1 form-textarea"
+            rows="3"
+            placeholder="Enter some long form content."
+          />
+        </label>
       </div>
     </div>
   </>
