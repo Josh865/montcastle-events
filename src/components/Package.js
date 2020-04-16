@@ -18,7 +18,7 @@ const Package = ({ name, price, features, image, index }) => {
         <div className="w-full p-6 md:p-12">
           <div className="flex items-center justify-between p-4">
             <h3 style={{ color: '#587795' }}>
-              <div className="text-2xl font-semibold leading-none md:text-4xl">
+              <div className="text-4xl font-semibold leading-none font-display md:text-5xl">
                 {name}
               </div>
               <div className="mt-2 text-xl font-thin leading-none md:text-3xl">
@@ -28,15 +28,14 @@ const Package = ({ name, price, features, image, index }) => {
             <div>
               <button
                 type="button"
-                className="px-3 py-2 text-sm text-pink-700 rounded shadow md:text-base"
-                style={{ backgroundColor: '#f6dfdc' }}
+                className="px-3 py-2 text-sm text-pink-700 bg-red-100 rounded shadow md:text-base hover:bg-red-200"
               >
                 Sign Me Up
               </button>
             </div>
           </div>
 
-          <ul className="w-full p-6 border" style={{ borderColor: '#f6dfdc' }}>
+          <ul className="w-full p-6 border border-red-200">
             {features.map(feature => (
               <li className="flex items-center mt-2 first:mt-0">
                 <div className="flex-shrink-0">
