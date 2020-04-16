@@ -172,7 +172,7 @@ const Index2 = ({ data }) => (
     <div className="py-16 bg-blue-100">
       <div className="max-w-2xl px-6 mx-auto mb-8 md:px-0">
         <h2
-          className="mb-8 text-5xl leading-none text-center font-display md:text-6xl"
+          className="mb-8 text-5xl font-bold leading-none text-center font-display md:text-6xl"
           style={{ color: '#587795' }}
         >
           Who am I?
