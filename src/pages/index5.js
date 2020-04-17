@@ -109,9 +109,7 @@ const Index2 = ({ data }) => (
         Planning your wedding should be as easy as being in love. Now it is!
         Montcastle Events has turned the planning process upside down and
         changed what used to be an overwhelming process into one that&apos;s{' '}
-        <div className="flex justify-center text-4xl text-pink-500 font-display">
-          fun, simple, and affordable!
-        </div>
+        <b>fun</b>, <b>simple</b>, and <b>affordable</b>!
       </div>
     </div>
 
@@ -119,20 +117,18 @@ const Index2 = ({ data }) => (
     <div className="hidden px-6 md:block">
       <div className="relative max-w-6xl mx-auto">
         <img src={hero} className="w-3/4 ml-auto shadow-md" />
-        <div className="absolute w-1/2 p-10 text-lg leading-loose text-center text-gray-500 bg-red-100 shadow-lg pin-middle">
+        <div className="absolute w-1/2 p-10 text-lg leading-loose text-gray-500 bg-red-100 shadow-lg pin-middle">
           Planning your wedding should be as easy as being in love. Now it is!
           Montcastle Events has turned the planning process upside down and
           changed what used to be an overwhelming process into one that&apos;s{' '}
-          <div className="text-4xl text-pink-500 font-display">
-            fun, simple, and affordable!
-          </div>
+          <b>fun</b>, <b>simple</b>, and <b>affordable</b>!
         </div>
       </div>
     </div>
 
     <div className="max-w-2xl px-6 mx-auto my-12 md:px-0">
       <h2
-        className="mb-8 text-5xl font-bold leading-tight text-center font-display md:font-semibold md:text-6xl"
+        className="mb-8 text-5xl font-bold leading-tight text-center md:font-normal font-display md:text-6xl"
         style={{ color: '#587795' }}
       >
         So, how does this work?
@@ -145,7 +141,7 @@ const Index2 = ({ data }) => (
           href="https://getcozybars.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-pink-400 underline"
+          className="text-pink-400 underline transition duration-75 hover:text-blue-800 transition-color"
         >
           Bubbles and Brews
         </a>{' '}
@@ -172,7 +168,7 @@ const Index2 = ({ data }) => (
     <div className="py-16 bg-blue-100">
       <div className="max-w-2xl px-6 mx-auto mb-8 md:px-0">
         <h2
-          className="mb-8 text-5xl font-bold leading-none text-center font-display md:text-6xl"
+          className="mb-8 text-5xl font-bold leading-none text-center font-display md:text-6xl md:font-normal"
           style={{ color: '#587795' }}
         >
           Who am I?
@@ -203,7 +199,7 @@ const Index2 = ({ data }) => (
 
     <div className="max-w-2xl px-6 mx-auto my-12 md:px-0">
       <h2
-        className="mb-8 text-5xl font-bold leading-tight text-center md:font-semibold md:text-6xl font-display"
+        className="mb-8 text-5xl font-bold leading-tight text-center md:font-normal md:text-6xl font-display"
         style={{ color: '#587795' }}
       >
         Let&apos;s get in touch!

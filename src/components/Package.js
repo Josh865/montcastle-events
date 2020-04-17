@@ -28,7 +28,7 @@ const Package = ({ name, price, features, image, index }) => {
             <div>
               <button
                 type="button"
-                className="px-3 py-2 text-sm text-pink-700 bg-red-100 rounded shadow md:text-base hover:bg-red-200"
+                className="px-3 py-2 text-sm text-pink-700 transition transition-colors duration-150 bg-red-100 rounded shadow md:text-base hover:bg-red-200"
               >
                 Sign Me Up
               </button>
