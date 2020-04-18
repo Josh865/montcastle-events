@@ -289,6 +289,15 @@ const Index = ({ data }) => (
             placeholder="Rustic and intimate"
           />
         </label>
+
+        <div className="flex justify-center mt-6">
+          <button
+            type="submit"
+            className="px-4 py-2 text-lg text-white transition duration-150 bg-blue-700 rounded hover:bg-blue-800 transition-color"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   </>
