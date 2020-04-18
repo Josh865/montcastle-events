@@ -128,8 +128,8 @@ const Index = ({ data }) => (
       </h2>
       <p className="text-lg leading-loose text-gray-600">
         All of our packages include everything you need for a beautiful
-        celebration with forty of your guests. We've partnered with some amazing
-        vendors including{' '}
+        celebration with forty of your guests. We&apos;ve partnered with some
+        amazing vendors including{' '}
         <a
           href="https://getcozybars.com/"
           target="_blank"
@@ -292,7 +292,7 @@ export const query = graphql`
   query {
     image1: file(relativePath: { eq: "bouquet.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 865) {
           ...GatsbyImageSharpFluid
         }
       }

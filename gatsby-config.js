@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Tiny Weddings NC`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Montcastle Events`,
+    description: `A microwedding planner based in Charlotte, North Carolina.`,
+    author: `Mary Katherine`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,13 +35,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Montcastle Events`,
+        short_name: `Montcastle Events`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fde8e8`,
+        theme_color: `#fde8e8`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `src/images/gatsby-icon.png`, This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
