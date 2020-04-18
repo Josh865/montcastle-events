@@ -110,7 +110,7 @@ const Index = ({ data }) => (
             alt="Bouquet of flowers"
           />
         </div>
-        <div className="absolute w-1/2 p-10 text-lg leading-loose text-gray-500 bg-red-100 shadow-lg pin-middle">
+        <div className="absolute w-1/2 p-10 text-lg leading-loose text-gray-600 bg-red-100 shadow-lg pin-middle">
           Planning your wedding should be as easy as being in love. Now it is!
           Montcastle Events has turned the planning process upside down and
           changed what used to be an overwhelming process into one that&apos;s{' '}
@@ -162,7 +162,7 @@ const Index = ({ data }) => (
         >
           Who am I?
         </h2>
-        <p className="text-lg leading-loose text-gray-500">
+        <p className="text-lg leading-loose text-gray-600">
           I&apos;m Mary Katherine, lover of happily ever afters and the little
           things. I&apos;ve had the opportunity to work with some of the premier
           vendors in the South and am so eager to bring what I know to your
@@ -198,29 +198,36 @@ const Index = ({ data }) => (
       >
         Let&apos;s get in touch!
       </h2>
-      <p className="text-lg text-gray-500">
+      <p className="text-lg text-gray-600">
         Ready to do this thing? Let me know and we&apos;ll get the ball rolling
         on your perfect day in no time!
       </p>
-      <div className="my-6">
+      <form
+        id="contactForm"
+        name="contact"
+        className="my-6"
+        data-netlify="true"
+      >
         <label className="block">
-          <span className="text-gray-500">Name</span>
+          <span className="text-gray-600">Name</span>
           <input
+            name="name"
             className="block w-full mt-1 form-input"
             placeholder="Jane Doe"
           />
         </label>
 
         <label className="block mt-4">
-          <span className="text-gray-500">Email</span>
+          <span className="text-gray-600">Email</span>
           <input
+            name="email"
             className="block w-full mt-1 form-input"
             placeholder="jane@example.com"
           />
         </label>
 
         <div className="block mt-4">
-          <span className="text-gray-500">
+          <span className="text-gray-600">
             Which package are you interested in?
           </span>
           <div className="mt-2 ml-1">
@@ -229,11 +236,10 @@ const Index = ({ data }) => (
                 <input
                   type="radio"
                   className="form-radio"
-                  name="radio"
+                  name="package"
                   value="1"
-                  checked
                 />
-                <span className="ml-2">Charming</span>
+                <span className="ml-2 text-gray-600">Charming</span>
               </label>
             </div>
             <div>
@@ -241,10 +247,10 @@ const Index = ({ data }) => (
                 <input
                   type="radio"
                   className="form-radio"
-                  name="radio"
+                  name="package"
                   value="2"
                 />
-                <span className="ml-2">Cheery</span>
+                <span className="ml-2 text-gray-600">Cheery</span>
               </label>
             </div>
             <div>
@@ -252,10 +258,10 @@ const Index = ({ data }) => (
                 <input
                   type="radio"
                   className="form-radio"
-                  name="radio"
+                  name="package"
                   value="3"
                 />
-                <span className="ml-2">Cozy</span>
+                <span className="ml-2 text-gray-600">Cozy</span>
               </label>
             </div>
             <div>
@@ -263,26 +269,27 @@ const Index = ({ data }) => (
                 <input
                   type="radio"
                   className="form-radio"
-                  name="radio"
+                  name="package"
                   value="3"
                 />
-                <span className="ml-2">Elope</span>
+                <span className="ml-2 text-gray-600">Elope</span>
               </label>
             </div>
           </div>
         </div>
 
         <label className="block mt-4">
-          <span className="text-gray-500">
+          <span className="text-gray-600">
             What&apos;s your vision and style?
           </span>
           <textarea
+            name="notes"
             className="block w-full mt-1 form-textarea"
             rows="3"
             placeholder="Rustic and intimate"
           />
         </label>
-      </div>
+      </form>
     </div>
   </>
 );

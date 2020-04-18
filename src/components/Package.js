@@ -26,12 +26,12 @@ const Package = ({ name, price, features, image, index }) => {
               </div>
             </h3>
             <div>
-              <button
-                type="button"
+              <a
+                href="#contactForm"
                 className="px-3 py-2 text-sm text-pink-700 transition transition-colors duration-150 bg-red-100 rounded shadow md:text-base hover:bg-red-200"
               >
                 Sign Me Up
-              </button>
+              </a>
             </div>
           </div>
 
@@ -54,7 +54,7 @@ const Package = ({ name, price, features, image, index }) => {
                     />
                   </svg>
                 </div>
-                <p className="ml-2 text-base font-medium leading-6 text-gray-500">
+                <p className="ml-2 text-base font-medium leading-6 text-gray-600">
                   {feature}
                 </p>
               </li>
