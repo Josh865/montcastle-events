@@ -1,272 +1,309 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Pricing from '../components/PricingTwo';
+import Package from '../components/Package';
 
-import crown from '../images/crown.svg';
-import hero from '../images/hero.jpg';
+import charming from '../images/charming.jpg';
+import cheery from '../images/cheery.jpg';
+import cozy from '../images/cozy.jpg';
+import elope from '../images/elope.jpg';
+import mary from '../images/mary.jpg';
 
-const Home = () => {
-  const [open, setOpen] = useState(false);
+const packages = [
+  {
+    name: 'Charming',
+    price: '$6000',
+    features: [
+      'Six hours for event',
+      'Full coordination and event styling',
+      'Venue',
+      'Full floral design',
+      'Use of decor closet',
+      'Tables and chairs',
+      'Officiant',
+      'Photography coverage',
+      'Bubbles and Brews*',
+      'Dinner',
+      'Cake',
+    ],
+    image: charming,
+  },
+  {
+    name: 'Cheery',
+    price: '$5000',
+    features: [
+      'Five hours for event',
+      'Full coordination and event styling',
+      'Venue',
+      'Choice of four floral',
+      'Use of decor closet',
+      'Tables and chairs',
+      'Officiant',
+      'Photography coverage',
+      'Bubbles and Brews*',
+      'Grazing table ',
+      'Cake',
+    ],
+    image: cheery,
+  },
+  {
+    name: 'Cozy',
+    price: '$4000',
+    features: [
+      'Five hours for event',
+      'Full coordination and event styling',
+      'Venue',
+      'Choice of four floral',
+      'Use of decor closet',
+      'Tables and chairs',
+      'Officiant',
+      'Photography coverage',
+      'Bubbles and Brews*',
+      'Grazing table ',
+      'Cake',
+    ],
+    image: cozy,
+  },
+  {
+    name: 'Elope',
+    price: '$600 and up',
+    features: [
+      'Full coordination',
+      'Location list',
+      'Floral',
+      'Photography for 1.5 hours',
+      'Cupcakes for seven',
+    ],
+    image: elope,
+  },
+];
 
-  return (
-    <>
-      <div className="relative overflow-hidden bg-white">
-        <div className="max-w-screen-xl mx-auto ">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <div className="px-4 pt-6 sm:px-6 lg:px-8">
-              <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
-                <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                  <div className="flex items-center justify-between w-full md:w-auto">
-                    <a href="/">
-                      <img
-                        className="w-auto h-10 sm:h-12"
-                        src={crown}
-                        alt="Tiny Weddings Logo"
-                      />
-                    </a>
-                    <div className="flex items-center -mr-2 md:hidden">
-                      <button
-                        onClick={() => setOpen(true)}
-                        type="button"
-                        className="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
-                      >
-                        <svg
-                          className="w-6 h-6"
-                          stroke="currentColor"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="hidden md:block md:ml-10 md:pr-4">
-                  <a
-                    href="#"
-                    className="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-                  >
-                    Packages
-                  </a>
-                  <a
-                    href="/blog"
-                    className="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-                  >
-                    Blog
-                  </a>
-                  <a
-                    href="#"
-                    className="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-                  >
-                    Testimonials
-                  </a>
-                  <a
-                    href="#"
-                    className="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-                  >
-                    Partners
-                  </a>
-                </div>
-              </nav>
-            </div>
+const Index = ({ data }) => (
+  <>
+    <div className="py-8">
+      <h1
+        className="text-6xl text-center font-display"
+        style={{ color: '#587795' }}
+      >
+        Montcastle Events
+      </h1>
+    </div>
 
-            {open && (
-              <div className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden">
-                <div className="rounded-lg shadow-md">
-                  <div className="overflow-hidden bg-white rounded-lg shadow-xs">
-                    <div className="flex items-center justify-between px-5 pt-4">
-                      <div>
-                        <img className="w-auto h-8" src={crown} alt="" />
-                      </div>
-                      <div className="-mr-2">
-                        <button
-                          onClick={() => setOpen(false)}
-                          type="button"
-                          className="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
-                        >
-                          <svg
-                            className="w-6 h-6"
-                            stroke="currentColor"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M6 18L18 6M6 6l12 12"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div className="px-2 pt-2 pb-3">
-                      <a
-                        href="#"
-                        className="block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
-                      >
-                        Packages
-                      </a>
-                      <a
-                        href="/blog"
-                        className="block px-3 py-2 mt-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
-                      >
-                        Blog
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-3 py-2 mt-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
-                      >
-                        Testimonials
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-3 py-2 mt-1 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
-                      >
-                        Partners
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+    {/* Mobile hero */}
+    <div className="block md:hidden">
+      <Img fluid={data.image1.childImageSharp.fluid} alt="Bouquet of flowers" />
+      <div className="relative w-5/6 px-6 py-8 mx-auto -mt-20 text-lg leading-loose text-center text-gray-600 bg-red-100">
+        Planning your wedding should be as easy as being in love. Now it is!
+        Montcastle Events has turned the planning process upside down and
+        changed what used to be an overwhelming process into one that&apos;s{' '}
+        <b>fun</b>, <b>simple</b>, and <b>affordable</b>!
+      </div>
+    </div>
 
-            <div className="max-w-screen-xl px-4 mx-auto mt-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div className="sm:text-center lg:text-left">
-                <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl font-display">
-                  Easy. Affordable.
-                  <br className="xl:hidden" />
-                  <span className="text-blue-500"> Beautiful.</span>
-                </h2>
-                <p className="mt-3 text-lg font-light text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Tiny weddings by Montcastle Events is the easiest way to have
-                  a beautiful and affordable wedding around Charlotte! We’ve
-                  simplified the process so you can show up, show out, and live
-                  happily ever after.
-                </p>
-                {/* <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
-                    <a
-                      href="#"
-                      className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out border border-transparent rounded-md bg-pinor-noir hover:bg-indigo-500 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10"
-                    >
-                      Get started
-                    </a>
-                  </div>
-                </div> */}
-              </div>
-            </div>
-            <svg
-              className="absolute inset-y-0 right-0 hidden w-48 h-full text-white transform translate-x-1/2 lg:block"
-              fill="currentColor"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-            >
-              <polygon points="50,0 100,0 50,100 0,100" />
-            </svg>
-          </div>
-        </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img
-            className="object-cover object-bottom w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src={hero}
-            alt="Couple holding hands overlooking mountains"
+    {/* Desktop hero */}
+    <div className="hidden px-6 md:block">
+      <div className="relative max-w-6xl mx-auto">
+        <div className="w-3/4 ml-auto shadow-md">
+          <Img
+            fluid={data.image1.childImageSharp.fluid}
+            alt="Bouquet of flowers"
           />
         </div>
+        <div className="absolute w-1/2 p-10 text-lg leading-loose text-gray-500 bg-red-100 shadow-lg pin-middle">
+          Planning your wedding should be as easy as being in love. Now it is!
+          Montcastle Events has turned the planning process upside down and
+          changed what used to be an overwhelming process into one that&apos;s{' '}
+          <b>fun</b>, <b>simple</b>, and <b>affordable</b>!
+        </div>
+      </div>
+    </div>
+
+    <div className="max-w-2xl px-6 mx-auto my-12 md:px-0">
+      <h2
+        className="mb-8 text-5xl font-bold leading-tight text-center md:font-normal font-display md:text-6xl"
+        style={{ color: '#587795' }}
+      >
+        So, how does this work?
+      </h2>
+      <p className="text-lg leading-loose text-gray-600">
+        All of our packages include everything you need for a beautiful
+        celebration with forty of your guests. We've partnered with some amazing
+        vendors including{' '}
+        <a
+          href="https://getcozybars.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-400 underline transition duration-75 hover:text-blue-800 transition-color"
+        >
+          Bubbles and Brews
+        </a>{' '}
+        mobile bar to add that extra touch of amazing to your day!
+      </p>
+    </div>
+
+    <div className="max-w-full mx-auto">
+      {packages.map((p, index) => (
+        <Package
+          name={p.name}
+          price={p.price}
+          features={p.features}
+          image={p.image}
+          index={index}
+        />
+      ))}
+    </div>
+
+    <div className="py-16 bg-blue-100">
+      <div className="max-w-2xl px-6 mx-auto mb-8 md:px-0">
+        <h2
+          className="mb-8 text-5xl font-bold leading-none text-center font-display md:text-6xl md:font-normal"
+          style={{ color: '#587795' }}
+        >
+          Who am I?
+        </h2>
+        <p className="text-lg leading-loose text-gray-500">
+          I&apos;m Mary Katherine, lover of happily ever afters and the little
+          things. I&apos;ve had the opportunity to work with some of the premier
+          vendors in the South and am so eager to bring what I know to your
+          special day. I can&apos;t wait to dream with you. Let&apos;s talk
+          soon!
+        </p>
       </div>
 
-      <div className="px-4 py-12 lg:py-24 sm:px-6 lg:px-8 pattern-bg">
-        <div className="flex justify-center mb-12">
-          <span
-            className="text-4xl leading-10 tracking-tight text-blue-900 sm:text-5xl sm:leading-none md:text-6xl font-display"
-            style={{ textShadow: '1px 1px 5px rgba(0,0,0,0.2)' }}
-          >
-            So how does this work?
+      <div className="relative flex flex-col max-w-5xl mx-auto md:justify-end md:flex-row md:h-600">
+        <div className="w-full p-6 text-base leading-loose text-gray-600 bg-white border-2 border-red-200 shadow-lg md:top-0 md:left-0 md:text-lg md:absolute md:max-w-xl md:mt-12">
+          My gift in life is to serve, my passion is to create and event
+          planning meets at the intersection of the two.
+        </div>
+        <div className="max-w-md mx-auto mt-6 md:max-w-full md:mx-0 md:w-2/3 md:mt-0">
+          <img
+            src={mary}
+            className="object-contain object-top w-full h-full"
+            alt="Mary Katherine"
+          />
+          {/* <Img
+              fluid={data.image2.childImageSharp.fluid}
+              alt="Mary Katherine"
+              imgStyle={{ objectFit: 'contain' }}
+            /> */}
+        </div>
+      </div>
+    </div>
+
+    <div className="max-w-2xl px-6 mx-auto my-12 md:px-0">
+      <h2
+        className="mb-8 text-5xl font-bold leading-tight text-center md:font-normal md:text-6xl font-display"
+        style={{ color: '#587795' }}
+      >
+        Let&apos;s get in touch!
+      </h2>
+      <p className="text-lg text-gray-500">
+        Ready to do this thing? Let me know and we&apos;ll get the ball rolling
+        on your perfect day in no time!
+      </p>
+      <div className="my-6">
+        <label className="block">
+          <span className="text-gray-500">Name</span>
+          <input
+            className="block w-full mt-1 form-input"
+            placeholder="Jane Doe"
+          />
+        </label>
+
+        <label className="block mt-4">
+          <span className="text-gray-500">Email</span>
+          <input
+            className="block w-full mt-1 form-input"
+            placeholder="jane@example.com"
+          />
+        </label>
+
+        <div className="block mt-4">
+          <span className="text-gray-500">
+            Which package are you interested in?
           </span>
-        </div>
-        <Pricing />
-      </div>
-
-      <div className="relative px-4 my-24 sm:px-6 lg:px-8">
-        <blockquote className="mt-8">
-          <div className="max-w-3xl mx-auto text-xl font-medium leading-8 text-center text-gray-900">
-            <p>
-              “Mary did an incredible job of making our wedding special! She
-              made it super simple, super fun, and super affordable. I wouldn't
-              hesitate to recommend Mary to anyone looking for a micro wedding
-              in NC.”
-            </p>
-          </div>
-          <footer className="mt-8">
-            <div className="md:flex md:items-center md:justify-center">
-              <div className="md:flex-shrink-0">
-                <img
-                  className="w-10 h-10 mx-auto rounded-full"
-                  src="https://randomuser.me/api/portraits/women/65.jpg"
-                  alt=""
+          <div className="mt-2 ml-1">
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="radio"
+                  value="1"
+                  checked
                 />
-              </div>
-              <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                <div className="text-base font-medium leading-6 text-gray-900">
-                  Jane Doe
-                </div>
-
-                <svg
-                  className="hidden w-5 h-5 mx-1 text-pinor-noir md:block"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M11 0h3L9 20H6l5-20z"></path>
-                </svg>
-
-                <div className="text-base font-medium leading-6 text-gray-500">
-                  Charlotte, NC
-                </div>
-              </div>
+                <span className="ml-2">Charming</span>
+              </label>
             </div>
-          </footer>
-        </blockquote>
-      </div>
-
-      <div className="px-4 pt-16 pb-8 bg-gray-100 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-around max-w-2xl mx-auto">
-          <a
-            href="#"
-            className="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-          >
-            Packages
-          </a>
-          <a
-            href="/blog"
-            className="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-          >
-            Blog
-          </a>
-          <a
-            href="#"
-            className="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-          >
-            Testimonials
-          </a>
-          <a
-            href="#"
-            className="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-          >
-            Partners
-          </a>
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="radio"
+                  value="2"
+                />
+                <span className="ml-2">Cheery</span>
+              </label>
+            </div>
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="radio"
+                  value="3"
+                />
+                <span className="ml-2">Cozy</span>
+              </label>
+            </div>
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  className="form-radio"
+                  name="radio"
+                  value="3"
+                />
+                <span className="ml-2">Elope</span>
+              </label>
+            </div>
+          </div>
         </div>
-        <div className="flex justify-center pt-8 text-gray-400">
-          &copy; 2020 Tiny Weddings NC
-        </div>
-      </div>
-    </>
-  );
-};
 
-export default Home;
+        <label className="block mt-4">
+          <span className="text-gray-500">
+            What&apos;s your vision and style?
+          </span>
+          <textarea
+            className="block w-full mt-1 form-textarea"
+            rows="3"
+            placeholder="Rustic and intimate"
+          />
+        </label>
+      </div>
+    </div>
+  </>
+);
+export default Index;
+
+export const query = graphql`
+  query {
+    image1: file(relativePath: { eq: "bouquet.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    image2: file(relativePath: { eq: "mary.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
