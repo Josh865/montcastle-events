@@ -143,12 +143,12 @@ const Index = ({ data }) => (
     </div>
 
     <div className="max-w-full mx-auto">
-      {packages.map((p, index) => (
+      {packages.map((pkg, index) => (
         <Package
-          name={p.name}
-          price={p.price}
-          features={p.features}
-          image={p.image}
+          name={pkg.name}
+          price={pkg.price}
+          features={pkg.features}
+          image={pkg.image}
           index={index}
         />
       ))}
@@ -207,7 +207,13 @@ const Index = ({ data }) => (
         name="contact"
         className="my-6"
         data-netlify="true"
+        netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="contact" />
+        <label className="hidden">
+          Don&apos;t fill this out if you&apos;re human:{' '}
+          <input name="bot-field" />
+        </label>
         <label className="block">
           <span className="text-gray-600">Name</span>
           <input
