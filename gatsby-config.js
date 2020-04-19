@@ -44,6 +44,20 @@ module.exports = {
         icon: `src/images/crown.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Sacramento`,
+          },
+          {
+            family: `Raleway`,
+            variants: [`300`, `400`, `500`, `600`, `700`],
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
