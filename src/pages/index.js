@@ -214,6 +214,7 @@ const Index = ({ data }) => {
           rolling on your perfect day in no time!
         </p>
         <form
+          action="/success"
           name="contact"
           className="my-6"
           data-netlify="true"

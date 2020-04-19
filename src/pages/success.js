@@ -3,7 +3,7 @@ import * as React from 'react';
 const Success = () => (
   <div className="flex items-center justify-center w-screen h-screen px-6 bg-blue-100 md:px-0">
     <div className="max-w-lg px-8 py-12 bg-white border border-pink-200 rounded shadow-lg">
-      <h1 className="mb-4 text-4xl text-blue-700 font-display">
+      <h1 className="mb-4 text-4xl text-center text-blue-700 font-display">
         Thanks for getting in touch!
       </h1>
 
@@ -13,7 +13,10 @@ const Success = () => (
       </p>
 
       <p className="mt-6 text-center">
-        <a href="/" className="text-blue-700">
+        <a
+          href="/"
+          className="text-pink-400 underline transition duration-75 hover:text-blue-800 transition-color"
+        >
           Return to Montcastle Events
         </a>
       </p>
