@@ -13,6 +13,7 @@
       {
         "labelComponents": ["<span>"]
       }
-    ]
+    ],
+    "import/no-unresolved": [2, { "caseSensitive": false }]
   }
 }
