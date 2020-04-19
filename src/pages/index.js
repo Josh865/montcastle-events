@@ -287,6 +287,12 @@ const Index = ({ data }) => {
           </div>
         </form>
       </div>
+
+      <div className="p-10 text-center bg-gray-200 md:p-16">
+        <span className="text-gray-500">
+          &copy; {new Date().getFullYear()} Montcastle Events
+        </span>
+      </div>
     </>
   );
 };
