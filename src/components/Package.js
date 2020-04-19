@@ -1,8 +1,13 @@
 import * as React from 'react';
 
-const Package = ({ name, price, features, image, index }) => {
-  // const bgColor = index % 2 ? '#d0d5d7' : '#f6dfdc';
-  const bgColor = 'white';
+const Package = ({
+  name,
+  price,
+  features,
+  image,
+  index,
+  setSelectedPackage,
+}) => {
   const isReversed = index % 2;
 
   return (
@@ -11,13 +16,10 @@ const Package = ({ name, price, features, image, index }) => {
         isReversed ? 'md:flex-row-reverse' : 'md:flex-row'
       }`}
     >
-      <div
-        className="flex items-center justify-center flex-1 w-full md:h-600"
-        style={{ backgroundColor: bgColor }}
-      >
+      <div className="flex items-center justify-center flex-1 w-full md:h-600">
         <div className="w-full p-6 md:p-12">
           <div className="flex items-center justify-between p-4">
-            <h3 style={{ color: '#587795' }}>
+            <h3 className="text-navy">
               <div className="text-4xl font-semibold leading-none font-display md:text-5xl">
                 {name}
               </div>
@@ -27,8 +29,9 @@ const Package = ({ name, price, features, image, index }) => {
             </h3>
             <div>
               <a
-                href="#contactForm"
+                href="#getInTouch"
                 className="px-3 py-2 text-sm text-pink-700 transition transition-colors duration-150 bg-red-100 rounded shadow md:text-base hover:bg-red-200"
+                onClick={() => setSelectedPackage(name)}
               >
                 Sign Me Up
               </a>
@@ -36,15 +39,14 @@ const Package = ({ name, price, features, image, index }) => {
           </div>
 
           <ul className="w-full p-6 border border-red-200">
-            {features.map(feature => (
-              <li className="flex items-center mt-2 first:mt-0">
+            {features.map((feature, index) => (
+              <li key={index} className="flex items-center mt-2 first:mt-0">
                 <div className="flex-shrink-0">
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 text-navy"
                     stroke="currentColor"
                     fill="none"
                     viewBox="0 0 24 24"
-                    style={{ color: '#587795' }}
                   >
                     <path
                       strokeLinecap="round"

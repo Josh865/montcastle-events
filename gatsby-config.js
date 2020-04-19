@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Montcastle Events`,
-    description: `A microwedding planner based in Charlotte, North Carolina.`,
-    author: `Mary Katherine`,
+    title: `Montcastle Events - Wedding and Event Planner in Charlotte, North Carolina`,
+    description: `A wedding and event planner serving Charlotte, North Carolina and beyond.`,
+    author: `Montcastle Events`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
